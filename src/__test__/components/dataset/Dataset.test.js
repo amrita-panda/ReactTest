@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import Dataset from './Dataset';
+import Dataset from '../../../components/dataset/Dataset';
 let wrapped;
 beforeEach(()=>{
     wrapped=mount(
@@ -30,7 +30,7 @@ describe('click Happens',()=>{
         //expect(wrapped.state('renderLayout').toEqual(1))
     })
     it('gridview button',()=>{
-     console.log(wrapped.find('#gridview-btn').simulate('click'))
+     //console.log(wrapped.find('#gridview-btn').simulate('click'))
      //wrapped.find('#gridview-btn').simulate('click');
      //wrapped.update();
         console.log(wrapped.find('button').length)
