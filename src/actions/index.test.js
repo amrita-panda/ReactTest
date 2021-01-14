@@ -1,5 +1,6 @@
-import {saveReview} from './index';
+import {saveReview,correctGuess} from './index';
 import {SAVE_REVIEW} from './Types';
+import { CORRECT_GUESS } from "./Types";
 
 describe('saveReview',()=>{
  it('Has the correct type',()=>{
@@ -12,4 +13,12 @@ describe('saveReview',()=>{
     expect(action.payload).toEqual('New Review')
  });
  
+})
+
+describe('correctGuess',()=>{
+
+   test('returns an action with type `CORRECT_GUESS` ',()=>{
+      const action=correctGuess();
+      expect(action).toEqual({type:'CORRECT_GUESS'})
+   })
 })

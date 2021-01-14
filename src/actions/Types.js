@@ -1,1 +1,2 @@
 export const SAVE_REVIEW = 'SAVE_REVIEW';
+export const CORRECT_GUESS='CORRECT_GUESS';

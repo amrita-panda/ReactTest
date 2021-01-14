@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../../actions/index';
 import axios from 'axios';
-import { Row, Col, Card, CardBody, CardFooter, Modal, ModalBody, ModalHeader } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import './CommentBox.css';
 
 class CommentBox extends Component {

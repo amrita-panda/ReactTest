@@ -4,7 +4,8 @@ import CommentList from './components/commentList/CommentList';
 import Dataset from './components/dataset/Dataset';
 import Counter from './components/counter/Counter';
 import GuessedWords from './components/guessedWords/GuessedWords';
-import Congrats from './components/congrats/Congrats'
+import Congrats from './components/congrats/Congrats';
+import Input from './components/input/Input';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
      <div className='ml-3 form-div'>
        <h3 className='text-center'>Jotto Playground</h3>
        <Congrats success={true}></Congrats>
+       <Input />
        <GuessedWords guessedWords={[{'guessedWord':'train','letterMatchCount':3}]}></GuessedWords>
      </div>
     </div>

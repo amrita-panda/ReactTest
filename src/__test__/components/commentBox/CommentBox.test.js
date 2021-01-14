@@ -109,7 +109,6 @@ describe('fetchapi',()=>{
     })
 
     it('trying to debug the app',()=>{
-        console.log(wrapped.debug())
         //it checks if the component is a honest componet
         expect(wrapped).toBeTruthy();
     })
