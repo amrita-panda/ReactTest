@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {convert} from '../utils/Currency';
 
 class TestExample extends Component {
     constructor() {
@@ -8,9 +9,18 @@ class TestExample extends Component {
           title: "",
           description: "",
           submitActive: false,
-          data:[]
+          data:{},
+          data2:{}
         };
       }
+       componentDidMount(){
+            convert('USD','CAD').then(response=>{
+              console.log(response);
+            }).catch(error=>{
+              console.log(error);
+            })
+            
+       }
       handleChange = event => {
         this.setState({
           [event.target.name]: event.target.value
@@ -42,16 +52,13 @@ class TestExample extends Component {
         }
       };
       fetchData=() =>{
-        axios.get('https://jsonplaceholder.typicode.com/comments').
-        then(response=>{
-            console.log(response);
-            this.setState({data:response.data})
-        }).catch(error=>{
-            console.log(error);
-        })
+       convert('USD','CAD').then(response=>{
+         console.log(response);
+         this.setState({data:response})
+       })
     }
       render() {
-        console.log(this.state.data)
+       // console.log(this.state.data)
         return (
           <form 
             className="controlled-form"
