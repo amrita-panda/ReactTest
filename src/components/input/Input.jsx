@@ -3,7 +3,14 @@ import {connect} from 'react-redux';
 
 
 class Input extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+
+        }
+    }
     render() {
+        console.log(this.props.success)
         return (
             <div data-test='component-input'>
                 {!this.props.success &&

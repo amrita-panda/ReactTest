@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import {findByTestAttr} from '../testUtils/commonFuntion';
 import Input from '../../../components/input/Input';
 import Root from '../../../Root';
@@ -7,8 +7,10 @@ import Root from '../../../Root';
 
 
 const setUp =(initialState={})=>{
-    let wrapper =mount(<Root initialState={initialState}><Input /></Root>)
-    //console.log(wrapper.debug());
+    let wrapper =mount(
+    <Root initialState={initialState}>
+        <Input />   
+    </Root>)
     return wrapper;
 }
 describe('render',()=>{
@@ -58,4 +60,16 @@ describe('render',()=>{
 })
 describe('update state',()=>{
 
+})
+
+describe('redux props',()=>{
+    test('has success piece of state as props',()=>{
+        const initialState={success:true};
+        const wrapper=setUp(initialState)
+       //const successProp=wrapper.instance().props
+       //expect(successProp).toBe(initialState);
+       console.log(wrapper.debug());
+
+        
+    })
 })

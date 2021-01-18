@@ -6,6 +6,7 @@ import Counter from './components/counter/Counter';
 import GuessedWords from './components/guessedWords/GuessedWords';
 import Congrats from './components/congrats/Congrats';
 import Input from './components/input/Input';
+import TestExample from './components/testExample/TestExample';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
        <Input />
        <GuessedWords guessedWords={[{'guessedWord':'train','letterMatchCount':3}]}></GuessedWords>
      </div>
+     <TestExample ></TestExample>
     </div>
   );
 }

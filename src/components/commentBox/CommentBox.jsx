@@ -30,6 +30,7 @@ class CommentBox extends Component {
 
     fetchData=() =>{
        axios.get('https://jsonplaceholder.typicode.com/comments').then(response=>{
+           
            this.setState({data:response.data})
        }).catch(error=>{
            console.log(error);
