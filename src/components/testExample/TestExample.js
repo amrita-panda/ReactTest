@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import {convert} from '../utils/Currency';
+import {testExampleServices} from '../services/testExampleServices'
 
 class TestExample extends Component {
     constructor() {
@@ -15,10 +15,16 @@ class TestExample extends Component {
       }
        componentDidMount(){
             convert('USD','CAD').then(response=>{
-              console.log(response);
+              console.log("currency api",response);
             }).catch(error=>{
               console.log(error);
             })
+
+           testExampleServices.getUsers().then(response2=>{
+             console.log("user api",response2)
+           }).catch(error=>{
+             console.log(error);
+           })
             
        }
       handleChange = event => {
